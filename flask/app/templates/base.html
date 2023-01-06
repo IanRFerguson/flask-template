@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--- Bootstrap CSS --->
+    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--- Custom CSS --->
+    {% block styles %}
+    {% endblock %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <!--- Flashed messages --->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class='alert alert-info' role='alert'>{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <!--- User content --->
+    {% block content %}
+    {% endblock %}
+
+    <!--- Custom JavaScript --->
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>

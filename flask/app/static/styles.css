@@ -1,0 +1,21 @@
+/* Styling for Flask App template */
+body {
+    text-align: center;
+}
+
+input {
+    padding: 5px 10px;
+    width: 75%;
+    border: none;
+    border: thin solid #d4d4d4;
+    font-size: 20px;
+    color: #888;
+    font-family: ubuntu, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.main_container {
+    width: 65%;
+    margin: 0 auto;
+    padding: 3%;
+}

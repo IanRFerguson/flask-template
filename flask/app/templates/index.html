@@ -1,0 +1,24 @@
+<html>
+{% extends "base.html" %}
+
+<body>
+    {% block content %}
+    <div class="main_container">
+        <h1>Hello World!</h1>
+        <p>
+            This Flask template provides a baseline model for
+            a web app that can be quickly and effectively customized.
+        </p>
+        <p>See the <b><mark>README.md</mark></b> file in this repo for an outline of <b>where</b> and <b>how</b> to
+            update this template.
+        </p>
+    </div>
+    <div class="main_container">
+        <form action="{{ url_for('utilities.index') }}" method="POST">
+            <button class="btn btn-primary">Test Post Request</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
